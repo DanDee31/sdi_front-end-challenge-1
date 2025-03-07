@@ -22,7 +22,6 @@ function App() {
           const formattedDate = date.toLocaleString('en-US', {
             day: '2-digit', month: 'short'
           }).split(' ');
-
           return (
             <div key={news.id} className="item">
               <div style={{ position: "relative" }}>
@@ -46,7 +45,6 @@ function App() {
             </div>
           );
         })}
-
         <div className="pagination">
           <a href="#">&laquo;</a>
           <a href="#">1</a>
