@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+article {
+  max-width: 900px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.item {
+  position: relative;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.item img {
+  width: 100%;  
+  max-height: 500px;  
+  object-fit: cover;  
+}
+
+.date {
+  position: absolute;
+  bottom: -15px;
+  left: 15px;
+  background: red;
   color: white;
+  font-weight: bold;
+  padding: 15px;
+  width: 50px;
+  text-align: center;
+  transform: skew(-10deg);
 }
 
-.App-link {
-  color: #61dafb;
+.date .day {
+  display: block;
+  font-size: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.date .month {
+  display: block;
+  font-size: 15px;
+}
+
+.date::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 0;
+  height: 0;
+  border-right: 10px solid white;
+  border-top: 10px solid transparent; /* Arrow color */
+}
+
+.content {
+  padding: 15px;
+}
+
+.share {
+  text-align: right;
+  color: #6c757d;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.share .icon {
+  width: 16px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+hr{
+  color: #6c757d;
+}
+
+.author {
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: -15px;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #212529;
+  margin-bottom: 10px;
+}
+
+.body {
+  font-size: 16px;
+  color: #373c3f;
+  margin-bottom: 15px;
+}
+
+.link {
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.pagination {
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 12px;
+  margin: 0 3px;
+  border: 1px solid rgb(170, 170, 170);
+  background: #e9ecef;
+}
+
+.pagination a.active {
+  background: red;
+  color: white;
+  font-weight: bold;
+}
+
+.pagination a:hover {
+  background: #d6d6d6;
 }
